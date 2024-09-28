@@ -96,10 +96,10 @@ const Cart = () => {
         </Space>
       </Title>
       <Row gutter={16}>
-        <Col span={16}>
+        <Col span={16} xs={24} sm={24} >
           <Table columns={columns} dataSource={documents} pagination={false} />
         </Col>
-        <Col span={8}>
+        <Col span={8} xs={24} sm={24} className='mt-sm-5'>
           <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px' }}>
             <div style={{ marginBottom: '16px' }}>
               <Text strong>Subtotal:</Text> <Text>${subtotal.toFixed(2)}</Text>

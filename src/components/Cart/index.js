@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Button, Card, Image } from 'antd';
 import { useReadContext } from '../../Context/ReadContext';
-import { doc, serverTimestamp, setDoc, onSnapshot, collection, query } from 'firebase/firestore';
+import { doc, serverTimestamp, setDoc, onSnapshot, collection, query, where } from 'firebase/firestore';
 import { firestore } from '../../config/firebase';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { useAuthContext } from '../../Context/AuthContext';
@@ -18,14 +18,16 @@ const ItemList = () => {
 
   // Real-time listener for the cart collection
   useEffect(() => {
-    const q = query(collection(firestore, 'Cart'));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const cartItems = querySnapshot.docs.map(doc => doc.data().ItemId);
-      setDisabledItems(new Set(cartItems)); // Update the disabled items based on real-time data
-    });
-
-    return () => unsubscribe(); // Clean up the listener on component unmount
-  }, []);
+    if (users?.uid) {
+      const q = query(collection(firestore, 'Cart'), where("userId", "==", users.uid));
+      const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        const cartItems = querySnapshot.docs.map(doc => doc.data().ItemId);
+        setDisabledItems(new Set(cartItems)); // Update the disabled items for the current user
+      });
+  
+      return () => unsubscribe(); // Clean up the listener on component unmount
+    }
+  }, [users?.uid]);
 
   const addData = useCallback(async (newItem) => {
     const formData = {
@@ -90,7 +92,7 @@ const ItemList = () => {
                       }}
                       disabled={disabledItems.has(item?.uid)} // Disable the button if item is in the cart
                     >
-                      {disabledItems.has(item?.uid) ? 'Added' : <ShoppingCartOutlined className='fs-20'/>}
+                      {disabledItems.has(item?.uid) ? 'Added' : <ShoppingCartOutlined className='fs-2'/>}
                     </Button>
                   )}
 

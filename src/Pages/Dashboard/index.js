@@ -114,7 +114,7 @@ export default function Dashboard() {
             <SubMenu key="sub1" icon={<AppstoreAddOutlined />} title="Products">
               <Menu.Item key="3" icon={<UnorderedListOutlined />}>All</Menu.Item>
               <Menu.Item key="4" icon={<AppstoreAddOutlined />}>
-                <Link to="/dashboard/adddata">Add</Link>
+                <Link to="/dashboard/adddata" className='text-decoration-none'>Add</Link>
               </Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" icon={<SettingOutlined />} title="Settings">
