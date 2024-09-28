@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Col, Form, Input, Row, Select, Space, Typography } from 'antd';
 import {  HomeOutlined, CreditCardOutlined, EditOutlined } from '@ant-design/icons';
 import FormItem from 'antd/es/form/FormItem';
-import { useReadContext } from '../../../Context/ReadContext';
+import { useReadContext } from 'Context/ReadContext';
 
 const { Title, Text, Paragraph } = Typography;
 

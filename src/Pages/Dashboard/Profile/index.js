@@ -1,10 +1,10 @@
 import React from 'react'
-import { useAuthContext } from '../../../Context/AuthContext'
+import { useAuthContext } from 'Context/AuthContext'
 // import { useProfileContext } from '../../../Context/ProfileContext';
 import { Link } from 'react-router-dom';
 import { Image } from 'antd';
 import style from "../../../sass/profile.module.scss"
-import { useProfileContext } from '../../../Context/ReadProfileContext';
+import { useProfileContext } from 'Context/ReadProfileContext';
 
 
 

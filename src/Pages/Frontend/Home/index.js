@@ -5,8 +5,8 @@ import Confidence from './Confidence';
 import Hero from './Hero';
 import Deals from './Deals';
 import ShopingCatgories from './ShopingCatgories';
-import ItemList from '../../../components/Cart';
-import { useAuthContext } from '../../../Context/AuthContext';
+import ItemList from 'components/Cart';
+import { useAuthContext } from 'Context/AuthContext';
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Col, Form, Input, Progress, Row, Typography } from 'antd'
 import FormItem from 'antd/es/form/FormItem'
-import { firestore, storage } from '../../../config/firebase'
+import { firestore, storage } from 'config/firebase'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
 import { doc, serverTimestamp, setDoc } from 'firebase/firestore'
 

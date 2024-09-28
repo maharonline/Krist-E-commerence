@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Layout, Menu, Avatar, Drawer, Button } from 'antd';
 import {HomeOutlined, UserOutlined, AppstoreAddOutlined, UnorderedListOutlined, SettingOutlined, ProfileOutlined,SafetyOutlined, EditOutlined, MenuUnfoldOutlined} from '@ant-design/icons';
 import '../../sass/Sidebar.scss'; // Custom CSS file for styling
-import { useProfileContext } from '../../Context/ReadProfileContext';
+import { useProfileContext } from 'Context/ReadProfileContext';
 import { Link, Route, Routes } from 'react-router-dom';
 import { Content } from 'antd/es/layout/layout';
 import Profile from './Profile';

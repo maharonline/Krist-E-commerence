@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageCarousel from '../../../components/crosoul'
+import ImageCarousel from 'components/crosoul'
 import { Col, Row, Typography } from 'antd'
 import { ShoppingOutlined } from '@ant-design/icons';
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Table, Button, Typography, Space, Row, Col, Input, InputNumber } from 'antd';
 import { ShoppingCartOutlined,DeleteOutlined  } from '@ant-design/icons';
-import { useReadContext } from '../../../Context/ReadContext';
+import { useReadContext } from 'Context/ReadContext';
 import { deleteDoc, doc } from 'firebase/firestore';
-import { firestore } from '../../../config/firebase';
+import { firestore } from 'config/firebase';
 
 const { Title, Text } = Typography;
 

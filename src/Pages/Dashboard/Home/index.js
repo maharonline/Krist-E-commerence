@@ -1,8 +1,7 @@
 import React from 'react'
-import { useAuthContext } from '../../../Context/AuthContext'
-// import { Link } from 'react-router-dom'
-import { useReadContext } from '../../../Context/ReadContext'
-import { useProfileContext } from '../../../Context/ReadProfileContext'
+import { useAuthContext } from 'Context/AuthContext'
+import { useReadContext } from 'Context/ReadContext'
+import { useProfileContext } from 'Context/ReadProfileContext'
 import style from "../../../sass/home.module.scss"
 
 export default function Home() {

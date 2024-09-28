@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Col, Form, Input, Row, Typography } from 'antd'
-import { auth } from '../../../config/firebase'
+import { auth } from 'config/firebase'
 import { updatePassword } from 'firebase/auth'
 import style from "../../../sass/passwordupdate.module.scss"
 
