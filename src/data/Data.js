@@ -1,0 +1,75 @@
+export const wishlistData = [
+    {
+      id: 1,
+      name: "Wireless Headphones",
+      price: 150,
+      image: "/assets/images/wireless-headphones.jpg",
+      description: "High-quality wireless headphones with noise cancellation.",
+      addedDate: "2024-09-12",
+    },
+    {
+      id: 2,
+      name: "Smart Watch",
+      price: 200,
+      image: "/assets/images/smart-watch.jpg",
+      description: "A smartwatch with fitness tracking and heart rate monitor.",
+      addedDate: "2024-09-10",
+    },
+    {
+      id: 3,
+      name: "Gaming Mouse",
+      price: 75,
+      image: "/assets/images/gaming-mouse.jpg",
+      description: "RGB gaming mouse with customizable buttons and high DPI.",
+      addedDate: "2024-09-15",
+    },
+  ];
+  
+ export const cartData = [
+    {
+      id: 1,
+      name: "Laptop",
+      price: 1200,
+      image: "/assets/images/laptop.jpg",
+      quantity: 1,
+      totalPrice: 1200,
+      description: "High-performance laptop with 16GB RAM and 512GB SSD.",
+    },
+    {
+      id: 2,
+      name: "Bluetooth Speaker",
+      price: 100,
+      image: "/assets/dummy/headphone.jpg",
+      quantity: 2,
+      totalPrice: 200,
+      description: "Portable Bluetooth speaker with surround sound.",
+    },
+    {
+      id: 3,
+      name: "Smartphone",
+      price: 800,
+      image: "/assets/dummy/Laptop.jpg",
+      quantity: 1,
+      totalPrice: 800,
+      description: "Latest model smartphone with 128GB storage and 5G support.",
+    },
+    {
+      id: 4,
+      name: "Smartphone",
+      price: 800,
+      image: "/assets/dummy/Laptop.jpg",
+      quantity: 1,
+      totalPrice: 800,
+      description: "Latest model smartphone with 128GB storage and 5G support.",
+    },
+    {
+      id: 5,
+      name: "Smartphone",
+      price: 800,
+      image: "/assets/dummy/Laptop.jpg",
+      quantity: 1,
+      totalPrice: 800,
+      description: "Latest model smartphone with 128GB storage and 5G support.",
+    },
+  ];
+  

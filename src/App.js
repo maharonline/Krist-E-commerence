@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useAuthContext } from './Context/AuthContext';
+import './App.scss';
+import "bootstrap/dist/js/bootstrap.bundle";
+import ScreenLoader from './components/ScreenLoader';
+import Routes from "./Pages/Routes"
+import { ConfigProvider } from 'antd';
+import Loader from './components/Loader';
+
 
 function App() {
+  const {isAppLoading}=useAuthContext()
+  if(isAppLoading)return<Loader/>
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ConfigProvider theme={{ token: { colorPrimary: '#131118',borderRadius:2 } }}>
+   {
+     !isAppLoading?
+     <Routes/>   
+     :
+     <ScreenLoader/>
+   }
+  </ConfigProvider>
+    </>
   );
 }
 

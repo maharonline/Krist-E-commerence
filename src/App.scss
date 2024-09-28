@@ -1,0 +1,31 @@
+
+@import url( 'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "./sass/index";
+
+// :root {
+//     --ant-font-family: 'Roboto', sans-serif;
+//   }
+  
+//   body, .ant-typography, .ant-form, 
+//   .ant-form-item, 
+//   .ant-form-item-label > label, 
+//   .ant-form-item-control-input-content, 
+//   .ant-input, 
+//   .ant-btn  {
+//     font-family: var(--ant-font-family);
+//   }
+  
+
+
+
+#root{
+    display: flex;
+    font-family: Jost, sans-serif;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+main{
+    flex: 1 0 auto;
+}

@@ -2,12 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import "./config/global"
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import AuthContext from './Context/AuthContext';
+import ReadContext from './Context/ReadContext';
+import ReadProfileContext from './Context/ReadProfileContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AuthContext>
+      <ReadContext>
+        <ReadProfileContext>
+
+
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+        </ReadProfileContext>
+      </ReadContext>
+    </AuthContext>
   </React.StrictMode>
 );
 
