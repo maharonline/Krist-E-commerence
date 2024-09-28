@@ -89,6 +89,8 @@ const Cart = () => {
   ];
 
   return (
+    <main>
+
     <div style={{ padding: '20px',marginBottom:'100px',marginTop:"20px" }}>
       <Title level={2}>
         <Space>
@@ -96,10 +98,10 @@ const Cart = () => {
         </Space>
       </Title>
       <Row gutter={16}>
-        <Col span={16} xs={24} sm={24} >
+        <Col span={16} xs={24} sm={16} md={16} lg={16} xl={16} xxl={16}>
           <Table columns={columns} dataSource={documents} pagination={false} />
         </Col>
-        <Col span={8} xs={24} sm={24} className='mt-sm-5'>
+        <Col span={8} xs={24} sm={24} lg={8} xl={8} xxl={8} className='mt-sm-5'>
           <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px' }}>
             <div style={{ marginBottom: '16px' }}>
               <Text strong>Subtotal:</Text> <Text>${subtotal.toFixed(2)}</Text>
@@ -111,7 +113,7 @@ const Cart = () => {
                 value={discountCode}
                 onChange={(e) => setDiscountCode(e.target.value)}
                 suffix={<Button type="primary">Apply</Button>}
-              />
+                />
             </div>
             <div style={{ marginBottom: '16px' }}>
               <Text strong>Delivery Charge:</Text> <Text>${deliveryCharge.toFixed(2)}</Text>
@@ -124,6 +126,7 @@ const Cart = () => {
         </Col>
       </Row>
     </div>
+                </main>
   );
 };
 
